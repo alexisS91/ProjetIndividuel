@@ -24,14 +24,15 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Employee
-        public void Post(int id, Models.Employee employee)
+        public void Post(Models.Employee employee)
         {
-            proserv.Update(id, employee);
+            proserv.Create(employee);
         }
 
         // PUT: api/Employee/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Employee employee)
         {
+            proserv.Update(id, employee);
         }
 
         // DELETE: api/Employee/5

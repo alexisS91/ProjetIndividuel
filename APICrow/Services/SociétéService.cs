@@ -14,12 +14,10 @@ namespace APICrow.Services
 
         private SociétéRepository _repo = new SociétéRepository();
 
-        public void Create(string v, string v1, C.Société entity)
+        public void Create(C.Société entity)
         {
             _repo.Create(entity.ToGlobal());
         }
-
-
 
 
         public void Delete(int id)

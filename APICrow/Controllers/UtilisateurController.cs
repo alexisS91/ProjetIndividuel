@@ -25,14 +25,16 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Utilisateur
-        public void Post(int id, Models.Utilisateur projet)
+        public void Post(int id, Models.Utilisateur utilisateur)
         {
-            proserv.Update(id, projet);
+            proserv.Create(utilisateur);
         }
 
         // PUT: api/Utilisateur/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Utilisateur utilisateur)
         {
+            proserv.Update(id, utilisateur);
+
         }
 
         // DELETE: api/Utilisateur/5

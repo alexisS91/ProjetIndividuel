@@ -1,0 +1,58 @@
+﻿@model WebApIASp.Models.Financer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Financer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_finance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_finance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Somme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Somme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstRecompense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstRecompense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_utilisateur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_utilisateur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_projet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_projet)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

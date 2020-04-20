@@ -1,0 +1,60 @@
+﻿@model WebApIASp.Models.Projet
+
+<div>
+    <h4>Projet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_projet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_projet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlafondFinance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlafondFinance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroCompte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroCompte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlVideo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlVideo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_employee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_employee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_projet}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

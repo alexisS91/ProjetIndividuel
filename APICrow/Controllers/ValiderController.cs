@@ -24,14 +24,16 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Valider
-        public void Post(int id, Models.Valider valider)
+        public void Post(Models.Valider valider)
         {
-            proserv.Update(id, valider);
+            proserv.Create(valider);
         }
 
         // PUT: api/Valider/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Valider valider)
         {
+            proserv.Update(id, valider);
+
         }
 
         // DELETE: api/Valider/5

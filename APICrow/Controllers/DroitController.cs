@@ -23,14 +23,15 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Droit
-        public void Post(int id, Models.Droit droit)
+        public void Post(Models.Droit droit)
         {
-            proserv.Update(id, droit);
+            proserv.Create(droit);
         }
 
         // PUT: api/Droit/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Droit droit)
         {
+            proserv.Update(id, droit);
         }
 
         // DELETE: api/Droit/5

@@ -60,7 +60,7 @@ namespace DalDB
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertionProjet", projectParameter, plafondFinanceParameter, numeroCompteParameter, urlVidParameter, id_employeeParameter);
         }
-        #region
+    
         public virtual ObjectResult<selectProjet_Result> selectProjet()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<selectProjet_Result>("selectProjet");
@@ -173,9 +173,7 @@ namespace DalDB
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
-
-        #endregion
-
+    
         public virtual int updateProjet(Nullable<int> id_projet, string project, Nullable<int> plafondFinance, string numeroCompt, string urlVideo, Nullable<int> id_employee)
         {
             var id_projetParameter = id_projet.HasValue ?
@@ -370,9 +368,7 @@ namespace DalDB
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertionSociété", descriptionParameter, adresseParameter, contactParameter);
         }
-
-
-        #region
+    
         public virtual int insertionUtilisateur(string nom_utilisateur, string motDePasse, string nom, string prenom)
         {
             var nom_utilisateurParameter = nom_utilisateur != null ?
@@ -449,9 +445,7 @@ namespace DalDB
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<selectValider_Result>("selectValider");
         }
-
-        #endregion
-
+    
         public virtual int updateDroit(Nullable<int> id_droit, string nom_droit)
         {
             var id_droitParameter = id_droit.HasValue ?
@@ -601,11 +595,6 @@ namespace DalDB
                 new ObjectParameter("id_utilisateur", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateValider", id_validerParameter, statusParameter, commentaireParameter, id_projetParameter, id_utilisateurParameter);
-        }
-
-        internal int insertionFinancer(int somme, bool estRecompense, int id_utilisateur, int id_projet)
-        {
-            throw new NotImplementedException();
         }
     }
 }

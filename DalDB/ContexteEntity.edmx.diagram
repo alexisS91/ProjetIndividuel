@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="PateFormeModel.Palier" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PateFormeModel.Projet" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="PateFormeModel.Société" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PateFormeModel.Utilisateur" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PateFormeModel.Utilisateur" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PateFormeModel.Valider" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="PateFormeModel.FK_Projet_Employee" ManuallyRouted="false" />
         <AssociationConnector Association="PateFormeModel.Avoir" ManuallyRouted="false" />
@@ -22,6 +22,9 @@
         <AssociationConnector Association="PateFormeModel.FK_Palier_Projet" />
         <AssociationConnector Association="PateFormeModel.FK_Valider_Projet" />
         <AssociationConnector Association="PateFormeModel.FK_Valider_Utilisateur" />
+        <AssociationConnector Association="PateFormeModel.FK_Valider_Projet1" />
+        <AssociationConnector Association="PateFormeModel.FK_Utilisateur_Utilisateur" />
+        <AssociationConnector Association="PateFormeModel.FK_Valider_Utilisateur1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

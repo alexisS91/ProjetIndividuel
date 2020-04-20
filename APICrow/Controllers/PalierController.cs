@@ -23,14 +23,16 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Palier
-        public void Post(int id, Models.Palier palier)
+        public void Post(Models.Palier palier)
         {
-            proserv.Update(id, palier);
+            proserv.Create(palier);
         }
 
         // PUT: api/Palier/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Palier palier)
         {
+            proserv.Update(id, palier);
+
         }
 
         // DELETE: api/Palier/5

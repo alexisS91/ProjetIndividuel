@@ -23,14 +23,16 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Financer
-        public void Post(int id, Models.Financer financer)
+        public void Post(Models.Financer financer)
         {
-            proserv.Update(id, financer);
+            proserv.Create(financer);
         }
 
         // PUT: api/Financer/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Financer financer)
         {
+            proserv.Update(id, financer);
+
         }
 
         // DELETE: api/Financer/5

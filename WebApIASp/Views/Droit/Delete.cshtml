@@ -1,0 +1,40 @@
+﻿@model WebApIASp.Models.Droit
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Droit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_droit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_droit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_droit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_droit)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

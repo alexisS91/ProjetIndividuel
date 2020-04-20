@@ -1,0 +1,50 @@
+﻿@model WebApIASp.Models.Palier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Palier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_palier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_palier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Somme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Somme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recompense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recompense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_projet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_projet)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

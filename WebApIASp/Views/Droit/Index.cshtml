@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApIASp.Models.Droit>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_droit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_droit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_droit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_droit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_droit  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.id_droit }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.id_droit  })
+        </td>
+    </tr>
+}
+
+</table>

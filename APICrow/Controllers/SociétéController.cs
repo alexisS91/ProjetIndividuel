@@ -25,14 +25,17 @@ namespace APICrow.Controllers
         }
 
         // POST: api/Société
-        public void Post(int id, Models.Société société)
+        public void Post(Models.Société société)
         {
-            proserv.Update(id, société);
+
+            proserv.Create(société);
         }
 
         // PUT: api/Société/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, Models.Société société)
         {
+            proserv.Update(id, société);
+
         }
 
         // DELETE: api/Société/5
